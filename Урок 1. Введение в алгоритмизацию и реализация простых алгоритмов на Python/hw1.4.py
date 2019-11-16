@@ -14,9 +14,12 @@ import random
 while True:
     print("Введите границы для целого числа")
     try:
-        minn = int(input("Минимальная граница: "))
-        maxx = int(input("Максимальная граница: "))
-        print(random.randint(minn, maxx))
+        minn = int(input("Первая граница: "))
+        maxx = int(input("Вторая граница: "))
+        if maxx > minn:
+            print(random.randint(minn, maxx))
+        else:
+            print(random.randint(maxx, minn))
         break
     except ValueError as err:
         print("Необходимо ввести числа! Повторите попытку.\n")
@@ -37,7 +40,10 @@ while True:
         minn = ord(input("Минимальная граница: "))
         maxx = ord(input("Максимальная граница: "))
         if 97 <= minn <= 122 and 97 <= maxx <= 122:
-            print(chr(random.randint(minn, maxx)))
+            if maxx > minn:
+                print(chr(random.randint(minn, maxx)))
+            else:
+                print(chr(random.randint(maxx, minn)))
             break
         else:
             print("Необходимо ввести буквы английского алфавита\n")

@@ -8,6 +8,6 @@ while True:
             print(f"{year} год - невисокосный.")
         else:
             print(f"{year} год - високосный")
-
+        break
     except ValueError as er:
         print("Необходимо ввести число! Повторите попытку.\n")

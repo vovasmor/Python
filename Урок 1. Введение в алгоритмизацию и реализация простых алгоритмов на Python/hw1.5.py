@@ -9,7 +9,7 @@ while True:
         if 97 <= letter1 <= 122 and 97 <= letter2 <= 122:
             print(f"Положение первой буквы:  {letter1 - 96}")
             print(f"Положение второй буквы:  {letter2 - 96}")
-            if letter1 > letter2:
+            if letter2 > letter1:
                 print("Количество букв между символами: ", letter2 - letter1 - 1)
             elif letter1 > letter2:
                 print("Количество букв между символами: ", letter1 - letter2 - 1)
@@ -20,15 +20,3 @@ while True:
             print("Необходимо ввести буквы английского алфавита\n")
     except TypeError as er:
         print("Необходимо ввести символ!\n")
-
-
-
-
-
-
-
-
-
-
-
-
